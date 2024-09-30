@@ -1,3 +1,27 @@
-.box{
+.box {
     box-shadow: 0 0 8px #6c14d0;
+}
+
+.image-contener {
+    box-shadow: 0 0 8px #6c14d0;
+}
+
+.about-description {
+    box-shadow: 0 0 8px #6c14d0;
+}
+
+.btn-primary {
+    @apply bg-gradient-to-r from-pink-500 to-purple-500 p-3 rounded-3xl px-6
+}
+
+.about-button button {
+    box-shadow: 0 0 8px #ba14d0;
+}
+
+.shoes-form {
+    background-image: url('image/loging_bg.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    background-size: cover;
 }
