@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoes store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="scroll-smooth">
+
+
+
+
+
+    <nav class="fixed top-0 left-0 w-full bg-white shadow-md z-50 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+
+            <!-- Logo -->
+            <div class="text-2xl font-extrabold text-gray-800">
+                Shoe<span class="text-blue-600">s</span>
+            </div>
+
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex gap-8 text-gray-700 font-medium">
+                <li><a href="#Home" class="hover:text-blue-600 transition duration-300">Home</a></li>
+                <li><a href="#Products" class="hover:text-blue-600 transition duration-300">Products</a></li>
+                <li><a href="#About" class="hover:text-blue-600 transition duration-300">About</a></li>
+                <li><a href="#Review" class="hover:text-blue-600 transition duration-300">Review</a></li>
+                <li><a href="#Services" class="hover:text-blue-600 transition duration-300">Services</a></li>
+            </ul>
+
+            <!-- Desktop Icons -->
+            <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+            <div class="hidden md:flex items-center gap-5 text-gray-600 text-xl">
+                <!-- Heart Icon -->
+                <i class="fa-solid fa-heart hover:text-red-500 transition duration-300 cursor-pointer"></i>
+
+                <!-- Cart Icon  -->
+
+                <i class="fa-solid fa-cart-shopping hover:text-green-500 transition duration-300 cursor-pointer"></i>
+
+
+
+                <i class="fa-solid fa-user hover:text-blue-500 transition duration-300 cursor-pointer"></i>
+            </div>
+
+            <!-- Mobile Hamburger -->
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-2xl text-gray-700 focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4 flex flex-col gap-4 text-gray-700 font-medium px-4">
+            <a href="#Home" class="hover:text-blue-600 transition duration-300">Home</a>
+            <a href="#Products" class="hover:text-blue-600 transition duration-300">Products</a>
+            <a href="#About" class="hover:text-blue-600 transition duration-300">About</a>
+            <a href="#Review" class="hover:text-blue-600 transition duration-300">Review</a>
+            <a href="#Services" class="hover:text-blue-600 transition duration-300">Services</a>
+            <div class="flex gap-4 text-xl mt-2">
+                <i class="fa-solid fa-heart hover:text-red-500 transition duration-300"></i>
+                <i class="fa-solid fa-cart-shopping hover:text-green-500 transition duration-300"></i>
+                <i class="fa-solid fa-user hover:text-blue-500 transition duration-300"></i>
+            </div>
+        </div>
+
+
+
+
+
+    </nav>
+
+    <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+    </script>
+
+    <!-- Background Section -->
+    <section id="Home" class="relative bg-cover bg-center bg-no-repeat min-h-screen"
+        style="background-image: url('image/bg1.png');">
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-white/90 backdrop-blur-sm"></div>
+
+        <!-- Main Content -->
+        <div
+            class="relative z-10 max-w-7xl mx-auto px-6 py-16 md:py-24 flex flex-col-reverse md:flex-row items-center gap-10 animate-fade-in">
+            <!-- Text Area -->
+            <div class="md:w-1/2 space-y-6 text-center md:text-left">
+                <h1 class="text-5xl md:text-7xl font-bold text-[#c72092] drop-shadow-md">NIKE</h1>
+                <h2 class="text-4xl md:text-6xl font-bold text-[#c72092] drop-shadow-sm">Collection</h2>
+                <p class="text-gray-700 leading-relaxed text-lg">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
+                </p>
+                <button
+                    class="mt-6 inline-flex items-center gap-2 bg-gradient-to-r from-pink-500 to-purple-500 text-white px-6 py-3 rounded-full shadow-lg hover:gap-3 transition-all duration-300">
+                    SHOP NOW
+                    <img class="h-5" src="svg/side-arrow.svg" alt="">
+                </button>
+            </div>
+
+            <!-- Image Area -->
+            <div class="md:w-1/2 flex flex-col md:flex-row items-center justify-center gap-6">
+                <img src="image/shoes.png" alt="Shoe" class="w-4/5 md:w-full max-w-sm drop-shadow-xl">
+                <div class="flex flex-row md:flex-col gap-4 mt-4 md:mt-0">
+                    <img class="h-6 hover:scale-110 transition" src="svg/facebook.svg" alt="">
+                    <img class="h-6 hover:scale-110 transition" src="svg/insta.svg" alt="">
+                    <img class="h-6 hover:scale-110 transition" src="svg/twitter.svg" alt="">
+                    <img class="h-6 hover:scale-110 transition" src="svg/in.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- PRODUCTS -->
+    <!-- PRODUCTS TITLE -->
+    <section id="Products" class="py-20 bg-white">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-purple-700 tracking-wide">PRODUCTS</h1>
+        </div>
+
+        <!-- PRODUCT GRID -->
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+            <!-- Product Card Start -->
+            <div class="product-card bg-white shadow-lg rounded-xl overflow-hidden text-center p-6 hover:shadow-2xl transition"
+                data-name="NIKE" data-price="100.99" data-img="image/shoes1.png">
+                <img class="h-40 mx-auto object-contain mb-4" src="image/shoes1.png" alt="Shoes 1" />
+                <h2 class="text-2xl font-bold mb-2">NIKE</h2>
+                <p class="text-gray-500 text-sm mb-2">Lorem ipsum dolor sit amet consectetur.</p>
+                <h3 class="text-xl font-semibold mb-2">$100.99</h3>
+                <div class="flex justify-center gap-1 mb-4">
+                    <img src="image/icons8-star-32.png" class="h-5" />
+                    <img src="image/icons8-star-32.png" class="h-5" />
+                    <img src="image/icons8-star-32.png" class="h-5" />
+                    <img src="image/icons8-star-32.png" class="h-5" />
+                    <img src="image/icons8-star-32.png" class="h-5" />
+                </div>
+                <button
+                    class="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-6 py-2 rounded-full hover:scale-105 transition">
+                    Add to Cart
+                </button>
+
+            </div>
+
+
+
+            <div class="bg-white shadow-lg rounded-xl overflow-hidden text-center p-6 hover:shadow-2xl transition">
+                <img class="h-40 mx-auto object-contain mb-4" src="image/shoes2.png" alt="Shoes 2" />
+                <h2 class="text-2xl font-bold mb-2">NIKE</h2>
+                <p class="text-gray-500 text-sm mb-2">Lorem ipsum dolor sit amet consectetur.</p>
+                <h3 class="text-xl font-semibold mb-2">$200.99</h3>
+                <div class="flex justify-center gap-1 mb-4">
+                    <img src="image/icons8-star-32.png" class="h-5" />
+                    <img src="image/icons8-star-32.png" class="h-5" />
+                    <img src="image/icons8-star-32.png" class="h-5" />
+                    <img src="image/icons8-star-32.png" class="h-5" />
+                </div>
+                <button
+                    class="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-6 py-2 rounded-full hover:scale-105 transition">
+                    Add to Cart
+                </button>
+            </div>
+
+
+
+
+            <div class="bg-white shadow-lg rounded-xl overflow-hidden text-center p-6 hover:shadow-2xl transition">
+                <img class="h-40 mx-auto object-contain mb-4" src="image/shoes3.png" alt="Shoes 2" />
+                <h2 class="text-2xl font-bold mb-2">NIKE</h2>
+                <p class="text-gray-500 text-sm mb-2">Lorem ipsum dolor sit amet consectetur.</p>
+                <h3 class="text-xl font-semibold mb-2">$175.99</h3>
+                <div class="flex justify-center gap-1 mb-4">
+                    <img src="image/icons8-star-32.png" class="h-5" />
+                    <img src="image/icons8-star-32.png" class="h-5" />
+                    <img src="image/icons8-star-32.png" class="h-5" />
+                </div>
+                <button
+                    class="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-6 py-2 rounded-full hover:scale-105 transition">
+                    Add to Cart
+                </button>
+            </div>
+
+
+
+            <div class="bg-white shadow-lg rounded-xl overflow-hidden text-center p-6 hover:shadow-2xl transition">
+                <img class="h-40 mx-auto object-contain mb-4" src="image/shoes4.png" alt="Shoes 2" />
+                <h2 class="text-2xl font-bold mb-2">NIKE</h2>
+                <p class="text-gray-500 text-sm mb-2">Lorem ipsum dolor sit amet consectetur.</p>
+                <h3 class="text-xl font-semibold mb-2">$120.99</h3>
+                <div class="flex justify-center gap-1 mb-4">
+                    <img src="image/icons8-star-32.png" class="h-5" />
+                    <img src="image/icons8-star-32.png" class="h-5" />
+                    <img src="image/icons8-star-32.png" class="h-5" />
+                    <img src="image/icons8-star-32.png" class="h-5" />
+                </div>
+                <button
+                    class="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-6 py-2 rounded-full hover:scale-105 transition">
+                    Add to Cart
+                </button>
+            </div>
+
+
+
+            <div class="bg-white shadow-lg rounded-xl overflow-hidden text-center p-6 hover:shadow-2xl transition">
+                <img class="h-40 mx-auto object-contain mb-4" src="image/shoes5.png" alt="Shoes 2" />
+                <h2 class="text-2xl font-bold mb-2">NIKE</h2>
+                <p class="text-gray-500 text-sm mb-2">Lorem ipsum dolor sit amet consectetur.</p>
+                <h3 class="text-xl font-semibold mb-2">$150.99</h3>
+                <div class="flex justify-center gap-1 mb-4">
+                    <img src="image/icons8-star-32.png" class="h-5" />
+                    <img src="image/icons8-star-32.png" class="h-5" />
+                    <img src="image/icons8-star-32.png" class="h-5" />
+                    <img src="image/icons8-star-32.png" class="h-5" />
+                    <img src="image/icons8-star-32.png" class="h-5" />
+                </div>
+                <button
+                    class="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-6 py-2 rounded-full hover:scale-105 transition">
+                    Add to Cart
+                </button>
+            </div>
+
+
+
+            <div class="bg-white shadow-lg rounded-xl overflow-hidden text-center p-6 hover:shadow-2xl transition">
+                <img class="h-40 mx-auto object-contain mb-4" src="image/shoes6.png" alt="Shoes 2" />
+                <h2 class="text-2xl font-bold mb-2">NIKE</h2>
+                <p class="text-gray-500 text-sm mb-2">Lorem ipsum dolor sit amet consectetur.</p>
+                <h3 class="text-xl font-semibold mb-2">$220.99</h3>
+                <div class="flex justify-center gap-1 mb-4">
+                    <img src="image/icons8-star-32.png" class="h-5" />
+                    <img src="image/icons8-star-32.png" class="h-5" />
+                    <img src="image/icons8-star-32.png" class="h-5" />
+                    <img src="image/icons8-star-32.png" class="h-5" />
+                </div>
+                <button
+                    class="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-6 py-2 rounded-full hover:scale-105 transition">
+                    Add to Cart
+                </button>
+            </div>
+
+
+
+            <div class="bg-white shadow-lg rounded-xl overflow-hidden text-center p-6 hover:shadow-2xl transition">
+                <img class="h-40 mx-auto object-contain mb-4" src="image/shoes7.png" alt="Shoes 2" />
+                <h2 class="text-2xl font-bold mb-2">NIKE</h2>
+                <p class="text-gray-500 text-sm mb-2">Lorem ipsum dolor sit amet consectetur.</p>
+                <h3 class="text-xl font-semibold mb-2">$110.99</h3>
+                <div class="flex justify-center gap-1 mb-4">
+                    <img src="image/icons8-star-32.png" class="h-5" />
+                    <img src="image/icons8-star-32.png" class="h-5" />
+                    <img src="image/icons8-star-32.png" class="h-5" />
+                </div>
+                <button
+                    class="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-6 py-2 rounded-full hover:scale-105 transition">
+                    Add to Cart
+                </button>
+            </div>
+
+
+
+            <div class="bg-white shadow-lg rounded-xl overflow-hidden text-center p-6 hover:shadow-2xl transition">
+                <img class="h-40 mx-auto object-contain mb-4" src="image/shoes8.png" alt="Shoes 2" />
+                <h2 class="text-2xl font-bold mb-2">NIKE</h2>
+                <p class="text-gray-500 text-sm mb-2">Lorem ipsum dolor sit amet consectetur.</p>
+                <h3 class="text-xl font-semibold mb-2">$150.99</h3>
+                <div class="flex justify-center gap-1 mb-4">
+                    <img src="image/icons8-star-32.png" class="h-5" />
+                    <img src="image/icons8-star-32.png" class="h-5" />
+                    <img src="image/icons8-star-32.png" class="h-5" />
+                    <img src="image/icons8-star-32.png" class="h-5" />
+                </div>
+                <button
+                    class="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-6 py-2 rounded-full hover:scale-105 transition">
+                    Add to Cart
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+    <div id="About" class="py-16 px-4 bg-white items-center">
+        <div class="items-center flex flex-col justify-center ">
+            <h1 class="text-4xl font-bold text-center mb-12">
+                Web<span class="text-red-600">About</span>
+            </h1>
+
+            <div class="flex flex-col md:flex-row items-center justify-center gap-10 max-w-6xl mx-auto">
+
+                <!-- Image Gallery Section -->
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-6 p-4 items-center">
+                    <!-- Thumbnails -->
+                    <div class="flex flex-col md:flex-col gap-3 md:gap-4 justify-center items-center">
+                        <img src="image/red_shoes1.png" onclick="functio(this)"
+                            class="w-20 h-20 object-cover cursor-pointer border-2 border-gray-300 hover:border-red-600 rounded-md transition duration-300 ease-in-out" />
+                        <img src="image/red_shoes2.png" onclick="functio(this)"
+                            class="w-20 h-20 object-cover cursor-pointer border-2 border-gray-300 hover:border-red-600 rounded-md transition duration-300 ease-in-out" />
+                        <img src="image/red_shoes3.png" onclick="functio(this)"
+                            class="w-20 h-20 object-cover cursor-pointer border-2 border-gray-300 hover:border-red-600 rounded-md transition duration-300 ease-in-out" />
+                        <img src="image/red_shoes4.png" onclick="functio(this)"
+                            class="w-20 h-20 object-cover cursor-pointer border-2 border-gray-300 hover:border-red-600 rounded-md transition duration-300 ease-in-out" />
+                    </div>
+
+                    <!-- Main Image -->
+                    <div class="w-full md:w-auto flex justify-center">
+                        <div class="border-4 border-red-600 rounded-lg p-2 shadow-md">
+                            <img src="image/red_shoes1.png" id="imagebox"
+                                class="w-full max-w-xs md:w-80 h-auto object-contain" />
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Text Section -->
+                <div class="max-w-xl text-gray-700 text-justify">
+                    <p class="leading-relaxed">
+                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                        classical
+                        Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin
+                        professor at
+                        Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur,
+                        from
+                        a Lorem Ipsum passage, and going through the cites of the word in classical literature,
+                        discovered
+                        the
+                        undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum
+                        et
+                        Malorum"
+                        (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the
+                        theory
+                        of ethics, very popular during the Renaissance...
+                    </p>
+                </div>
+            </div>
+
+            <!-- Shop Now Button -->
+            <div class="text-center mt-10">
+                <a href="#"
+                    class="inline-block bg-red-600 text-white py-3 px-8 rounded-lg text-lg hover:bg-red-700 transition">
+                    Shop Now
+                </a>
+            </div>
+
+            <!-- Script -->
+            <script>
+                function functio(small) {
+                    var full = document.getElementById("imagebox");
+                    full.src = small.src;
+                }
+            </script>
+        </div>
+    </div>
+
+
+
+
+
+
+    <section class="max-w-7xl mx-auto px-4 py-20" id="Review">
+        <!-- Heading -->
+        <div class="text-center mb-16">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-gray-800">
+                CUSTOMER'S <span class="text-purple-700">REVIEW</span>
+            </h1>
+        </div>
+
+        <!-- Reviews Grid -->
+        <div class="grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+
+            <!-- Review Card -->
+            <div
+                class="border-4 border-gray-800 shadow-xl rounded-xl bg-white hover:shadow-purple-300 transition duration-300">
+                <div class="flex items-center gap-6 p-6">
+                    <img src="image/girl_dp1.jpg" alt="" class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover">
+                    <div>
+                        <h2 class="text-xl font-bold">Ranidi Lochana</h2>
+                        <div class="flex mt-1">
+                            <img src="image/icons8-star-32.png" alt="" class="w-5 h-5">
+                            <img src="image/icons8-star-32.png" alt="" class="w-5 h-5">
+                            <img src="image/icons8-star-32.png" alt="" class="w-5 h-5">
+                            <img src="image/icons8-star-32.png" alt="" class="w-5 h-5">
+                            <img src="image/icons8-star-32.png" alt="" class="w-5 h-5">
+                        </div>
+                    </div>
+                </div>
+                <div class="px-6 pb-6 text-gray-700 text-sm">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, amet nesciunt voluptatem cum
+                        architecto ipsum vero nulla voluptatibus.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Repeat Card for Each Reviewer -->
+
+            <div
+                class="border-4 border-gray-800 shadow-xl rounded-xl bg-white hover:shadow-purple-300 transition duration-300">
+                <div class="flex items-center gap-6 p-6">
+                    <img src="image/man_dp1.jpg" alt="" class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover">
+                    <div>
+                        <h2 class="text-xl font-bold">Sayuru Tharanga</h2>
+                        <div class="flex mt-1">
+                            <img src="image/icons8-star-32.png" alt="" class="w-5 h-5">
+                            <img src="image/icons8-star-32.png" alt="" class="w-5 h-5">
+                            <img src="image/icons8-star-32.png" alt="" class="w-5 h-5">
+                            <img src="image/icons8-star-32.png" alt="" class="w-5 h-5">
+                            <img src="image/icons8-star-32.png" alt="" class="w-5 h-5">
+                        </div>
+                    </div>
+                </div>
+                <div class="px-6 pb-6 text-gray-700 text-sm">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, amet nesciunt voluptatem cum
+                        architecto ipsum vero nulla voluptatibus.</p>
+                </div>
+            </div>
+
+            <div
+                class="border-4 border-gray-800 shadow-xl rounded-xl bg-white hover:shadow-purple-300 transition duration-300">
+                <div class="flex items-center gap-6 p-6">
+                    <img src="image/man_dp2.jpg" alt="" class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover">
+                    <div>
+                        <h2 class="text-xl font-bold">Senuda Dilwan</h2>
+                        <div class="flex mt-1">
+                            <img src="image/icons8-star-32.png" alt="" class="w-5 h-5">
+                            <img src="image/icons8-star-32.png" alt="" class="w-5 h-5">
+                            <img src="image/icons8-star-32.png" alt="" class="w-5 h-5">
+                            <img src="image/icons8-star-32.png" alt="" class="w-5 h-5">
+                            <img src="image/icons8-star-32.png" alt="" class="w-5 h-5">
+                        </div>
+                    </div>
+                </div>
+                <div class="px-6 pb-6 text-gray-700 text-sm">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, amet nesciunt voluptatem cum
+                        architecto ipsum vero nulla voluptatibus.</p>
+                </div>
+            </div>
+
+            <div
+                class="border-4 border-gray-800 shadow-xl rounded-xl bg-white hover:shadow-purple-300 transition duration-300">
+                <div class="flex items-center gap-6 p-6">
+                    <img src="image/gir_dp2.jpg" alt="" class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover">
+                    <div>
+                        <h2 class="text-xl font-bold">Kaveesha Vidurangi</h2>
+                        <div class="flex mt-1">
+                            <img src="image/icons8-star-32.png" alt="" class="w-5 h-5">
+                            <img src="image/icons8-star-32.png" alt="" class="w-5 h-5">
+                            <img src="image/icons8-star-32.png" alt="" class="w-5 h-5">
+                            <img src="image/icons8-star-32.png" alt="" class="w-5 h-5">
+                            <img src="image/icons8-star-32.png" alt="" class="w-5 h-5">
+                        </div>
+                    </div>
+                </div>
+                <div class="px-6 pb-6 text-gray-700 text-sm">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, amet nesciunt voluptatem cum
+                        architecto ipsum vero nulla voluptatibus.</p>
+                </div>
+            </div>
+
+            <div
+                class="border-4 border-gray-800 shadow-xl rounded-xl bg-white hover:shadow-purple-300 transition duration-300">
+                <div class="flex items-center gap-6 p-6">
+                    <img src="image/gir_dp3.jpg" alt="" class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover">
+                    <div>
+                        <h2 class="text-xl font-bold">John Deo</h2>
+                        <div class="flex mt-1">
+                            <img src="image/icons8-star-32.png" alt="" class="w-5 h-5">
+                            <img src="image/icons8-star-32.png" alt="" class="w-5 h-5">
+                            <img src="image/icons8-star-32.png" alt="" class="w-5 h-5">
+                            <img src="image/icons8-star-32.png" alt="" class="w-5 h-5">
+                            <img src="image/icons8-star-32.png" alt="" class="w-5 h-5">
+                        </div>
+                    </div>
+                </div>
+                <div class="px-6 pb-6 text-gray-700 text-sm">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, amet nesciunt voluptatem cum
+                        architecto ipsum vero nulla voluptatibus.</p>
+                </div>
+            </div>
+
+            <div
+                class="border-4 border-gray-800 shadow-xl rounded-xl bg-white hover:shadow-purple-300 transition duration-300">
+                <div class="flex items-center gap-6 p-6">
+                    <img src="image/man_dp3.jpg" alt="" class="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover">
+                    <div>
+                        <h2 class="text-xl font-bold">Charith Aruna</h2>
+                        <div class="flex mt-1">
+                            <img src="image/icons8-star-32.png" alt="" class="w-5 h-5">
+                            <img src="image/icons8-star-32.png" alt="" class="w-5 h-5">
+                            <img src="image/icons8-star-32.png" alt="" class="w-5 h-5">
+                            <img src="image/icons8-star-32.png" alt="" class="w-5 h-5">
+                            <img src="image/icons8-star-32.png" alt="" class="w-5 h-5">
+                        </div>
+                    </div>
+                </div>
+                <div class="px-6 pb-6 text-gray-700 text-sm">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, amet nesciunt voluptatem cum
+                        architecto ipsum vero nulla voluptatibus.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- OUR SERVICES Section -->
+    <section class="container mx-auto px-4 py-20" id="Services">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-bold">
+                OUR <span class="text-purple-700">SERVICES</span>
+            </h1>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <!-- Service 1 -->
+            <div
+                class="bg-white shadow-xl rounded-xl p-8 flex flex-col items-center text-center hover:shadow-2xl transition-all duration-300">
+                <img src="image/icons8-truck-50.png" alt="Fast Delivery" class="h-12 mb-4">
+                <h2 class="text-xl font-semibold mb-2">FAST DELIVERY</h2>
+                <p class="text-gray-600">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            </div>
+
+            <!-- Service 2 -->
+            <div
+                class="bg-white shadow-xl rounded-xl p-8 flex flex-col items-center text-center hover:shadow-2xl transition-all duration-300">
+                <img src="svg/refresh.svg" alt="Replacement" class="h-10 mb-4">
+                <h2 class="text-xl font-semibold mb-2">10 Days Replacement</h2>
+                <p class="text-gray-600">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            </div>
+
+            <!-- Service 3 -->
+            <div
+                class="bg-white shadow-xl rounded-xl p-8 flex flex-col items-center text-center hover:shadow-2xl transition-all duration-300">
+                <img src="svg/headset.svg" alt="Support" class="h-10 mb-4">
+                <h2 class="text-xl font-semibold mb-2">24 x 7 Support</h2>
+                <p class="text-gray-600">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOGIN FORM Section -->
+    <section class="bg-gray-100 py-20">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-12">
+            <!-- Shoe Image -->
+            <div class="flex-shrink-0">
+                <img src="image/logshoes.png" alt="Shoe Image" class="h-64 md:h-96 object-contain">
+            </div>
+
+            <!-- Login Form -->
+            <div class="bg-white shadow-2xl rounded-xl p-8 w-full max-w-md">
+                <h2 class="text-3xl font-bold text-center mb-6">Welcome Back!</h2>
+                <form>
+                    <div class="mb-4">
+                        <label class="block text-lg font-semibold mb-1">User Name</label>
+                        <input type="text" placeholder="User Name"
+                            class="w-full border-2 border-gray-300 p-3 rounded-xl text-base focus:outline-purple-700">
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-lg font-semibold mb-1">Password</label>
+                        <input type="password" placeholder="Password"
+                            class="w-full border-2 border-gray-300 p-3 rounded-xl text-base focus:outline-purple-700">
+                    </div>
+                    <button type="submit"
+                        class="bg-purple-700 hover:bg-purple-800 text-white w-full p-3 rounded-xl font-bold text-lg transition">Login</button>
+                </form>
+
+                <div class="flex justify-center items-center gap-4 mt-6">
+                    <img src="image/google.png" alt="Google" class="h-8 cursor-pointer">
+                    <img src="image/facebook.png" alt="Facebook" class="h-8 cursor-pointer">
+                    <img src="image/twitter.png" alt="Twitter" class="h-8 cursor-pointer">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 text-gray-800 py-10 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+
+            <!-- Contact -->
+            <div>
+                <h1 class="text-lg font-bold text-indigo-900 mb-4">Contact</h1>
+                <p class="flex items-center gap-2 mb-2">
+                    <i class="fa-solid fa-house text-indigo-900"></i>123/Colombo/Sri Lanka
+                </p>
+                <p class="flex items-center gap-2 mb-2">
+                    <i class="fa-solid fa-phone text-indigo-900"></i>+94 12 345 6789
+                </p>
+                <p class="flex items-center gap-2">
+                    <i class="fa-solid fa-envelope text-indigo-900"></i>contact@gmail.com
+                </p>
+            </div>
+
+            <!-- Get Help -->
+            <div>
+                <h1 class="text-lg font-bold text-indigo-900 mb-4">Get Help</h1>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-indigo-600">FAQ</a></li>
+                    <li><a href="#" class="hover:text-indigo-600">Shipping</a></li>
+                    <li><a href="#" class="hover:text-indigo-600">Returns</a></li>
+                    <li><a href="#" class="hover:text-indigo-600">Payment Options</a></li>
+                </ul>
+            </div>
+
+            <!-- Our Stores -->
+            <div>
+                <h1 class="text-lg font-bold text-indigo-900 mb-4">Our Stores</h1>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-indigo-600">Sri Lanka</a></li>
+                    <li><a href="#" class="hover:text-indigo-600">USA</a></li>
+                    <li><a href="#" class="hover:text-indigo-600">India</a></li>
+                    <li><a href="#" class="hover:text-indigo-600">Japan</a></li>
+                </ul>
+            </div>
+
+            <!-- Follow Us -->
+            <div>
+                <h1 class="text-lg font-bold text-indigo-900 mb-4">Follow Us</h1>
+                <div class="flex items-center space-x-4">
+                    <a href="#" class="bg-white rounded-full shadow-md p-2 hover:text-indigo-600 transition">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="bg-white rounded-full shadow-md p-2 hover:text-indigo-600 transition">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="#" class="bg-white rounded-full shadow-md p-2 hover:text-indigo-600 transition">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="bg-white rounded-full shadow-md p-2 hover:text-indigo-600 transition">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Newsletter -->
+            <div>
+                <h1 class="text-lg font-bold text-indigo-900 mb-4">Newsletter</h1>
+                <div class="flex flex-col sm:flex-row items-center gap-2">
+                    <input type="text" placeholder="You email id here"
+                        class="w-full sm:w-auto px-4 py-2 rounded-full bg-gray-300 text-sm focus:outline-none" />
+                    <button
+                        class="px-4 py-2 rounded-full bg-gradient-to-r from-pink-500 to-purple-600 text-white text-sm font-semibold hover:opacity-90 transition">
+                        Subscribe
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+
+
+
+</body>
+
+</html>
